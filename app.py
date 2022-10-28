@@ -22,7 +22,7 @@ def predict():
     output = round(prediction[0])
     #output2 = prediction2[0]
 
-    return render_template('index.html', prediction_text='Is  Cancelled is (Logistic)--- {} '.format(output,output2))
+    return render_template('index.html', prediction_text='Is  Cancelled is (Logistic)--- {} '.format(output))
 
 
 if __name__ == "__main__":
