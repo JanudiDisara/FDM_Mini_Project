@@ -7,7 +7,6 @@ from flask import Flask, render_template
 from flask import Flask, request, jsonify, render_template
 from flask_bootstrap import Bootstrap
 from wtforms import StringField, SubmitField
-from wtforms.validators import DataRequired
 
 app = Flask(__name__)
 Bootstrap(app)
@@ -49,6 +48,12 @@ def predict():
         result = "Reservation is not Cancelled"
 
     return render_template('index.html', prediction_text=f"{result}")
+
+
+@app.route('/analysis')
+def analysis():
+    return render_template('analysis.html')
+
 
 if __name__ == "__main__":
     app.run(debug=True)
